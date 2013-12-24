@@ -5,6 +5,7 @@ A fruit oriented rspec test formatter.
 Prints one of several fruits for successes =>
 :apple: :pineapple: :green_apple: :tangerine: :lemon: :cherries: :grapes:
 :watermelon: :strawberry: :peach: :melon: :banana: :tomato:
+
 and bombs and mushrooms for failures =>
 :mushroom: :bomb:
 
