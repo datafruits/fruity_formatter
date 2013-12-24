@@ -1,16 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'fruity_formatter/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "fruity_formatter"
-  spec.version       = FruityFormatter::VERSION
+  spec.version       = '0.0.1'
   spec.authors       = ["Tony Miller"]
   spec.email         = ["mcfiredrill@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A fruit oriented rspec test formatter.}
+  spec.summary       = %q{A fruit oriented rspec test formatter.}
+  spec.homepage      = "http://github.com/datafruits/fruiy_formatter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
