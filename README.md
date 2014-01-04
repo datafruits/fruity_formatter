@@ -1,5 +1,7 @@
 # FruityFormatter
 
+[![Build Status](https://secure.travis-ci.org/datafruits/fruity_formatter.png?branch=master)](http://travis-ci.org/datafruits/fruity_formatter)
+
 A fruit oriented rspec test formatter.
 
 Prints one of several fruits for successes =>
