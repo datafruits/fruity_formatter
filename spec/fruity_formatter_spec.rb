@@ -1,12 +1,19 @@
+# encoding: utf-8
 require 'fruity_formatter'
 
 describe FruityFormatter do
-  10.times do 
-    it "does the thing" do
-      expect(1+1).to eq(2)
-    end
+  before do
+    @output = StringIO.new
+    @formatter = FruityFormatter.new @output
+    @example = RSpec::Core::ExampleGroup.describe.example
+    @formatter.start(2)
   end
-  it "fails" do
-    expect(1+1).to eq(3)
+  it 'prints fruits for success' do
+    @formatter.should_receive(:grab_a_fruit)
+    @formatter.example_passed(@example)
+  end
+  it 'prints mushrooms for failures' do
+    @formatter.should_receive(:failure_emoji)
+    @formatter.example_failed(@example)
   end
 end

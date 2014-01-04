@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'rspec/core/formatters/progress_formatter'
 
-class FruityFormatter < RSpec::Core::Formatters::ProgressFormatter
+class FruityFormatter < RSpec::Core::Formatters::BaseTextFormatter
   FRUITS = {
     strawberry: { char: "🍓", color: :red },
     cherry: { char: "🍒", color: :magenta },
@@ -43,14 +43,19 @@ class FruityFormatter < RSpec::Core::Formatters::ProgressFormatter
     fruit = FRUITS[fruit_name]
     color(fruit[:char], fruit[:color])
   end
+  def failure_emoji
+    color("🍄", :black)
+  end
   def start(example_count)
     @cur_fruit = 0
     super(example_count)
   end
   def example_passed(example)
-    print grab_a_fruit
+    super(example)
+    output.print grab_a_fruit
   end
   def example_failed(example)
-    print color("🍄", :black)
+    super(example)
+    output.print failure_emoji
   end
 end
