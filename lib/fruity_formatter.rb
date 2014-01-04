@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'rspec/core/formatters/progress_formatter'
 
 class FruityFormatter < RSpec::Core::Formatters::ProgressFormatter
